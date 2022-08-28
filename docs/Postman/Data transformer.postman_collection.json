@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "62d4fb9d-4cc4-4081-bb18-6c0d955a1519",
+		"name": "Data transformer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Checkout",
+			"item": [
+				{
+					"name": "Shipping Tax",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/shipping-tax/3?state=inactive",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"shipping-tax",
+										"3"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "inactive"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payment_method\": \"cash_on_delivery\",\n    \"amount\": 6\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/shipping-tax/3/tax/5",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"shipping-tax",
+										"3",
+										"tax",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/shipping-tax/3/tax/141",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"shipping-tax",
+										"3",
+										"tax",
+										"141"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"test\",\n    \"description\": \"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/shipping-tax/3/tax",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"shipping-tax",
+										"3",
+										"tax"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/shipping-tax/3/tax/141",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"shipping-tax",
+										"3",
+										"tax",
+										"141"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Payment Tax",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/payment-tax/3",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"payment-tax",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/payment-tax/3/tax/5",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"payment-tax",
+										"3",
+										"tax",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payment_method\": \"cash_on_delivery\",\n    \"amount\": 6\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/payment-tax/3/tax/5",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"payment-tax",
+										"3",
+										"tax",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Service-Name",
+										"value": "{{X-Service-Name}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Service-Key",
+										"value": "{{X-Service-Key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payment_method\": \"cash_on_delivery\",\n    \"amount\": 5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url_DT}}/checkout/altex/payment-tax/3/tax",
+									"host": [
+										"{{base_url_DT}}"
+									],
+									"path": [
+										"checkout",
+										"altex",
+										"payment-tax",
+										"3",
+										"tax"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Oms",
+			"item": [
+				{
+					"name": "Order Address",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "X-Service-Name",
+								"value": "{{X-Service-Name}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"status\": \"registered\",\r\n\t\"comment\": \"De Test.\",\r\n\t\"is_customer_notified\": 0,\r\n\t\"admin_id\":1,\r\n\t\"admin_name\":\"ADMIN TEST\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url_DT}}/order-addresses/12355555555",
+							"host": [
+								"{{base_url_DT}}"
+							],
+							"path": [
+								"order-addresses",
+								"12355555555"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Suborder Status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Service-Name",
+								"value": "{{X-Service-Name}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Service-Key",
+								"value": "{{X-Service-Key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"status\": \"registered\",\r\n\t\"comment\": \"De Test.\",\r\n\t\"is_customer_notified\": 0,\r\n\t\"admin_id\":1,\r\n\t\"admin_name\":\"ADMIN TEST\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url_DT}}/suborders/123/status",
+							"host": [
+								"{{base_url_DT}}"
+							],
+							"path": [
+								"suborders",
+								"123",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Add new bundle(see description)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"website\": \"mediagalaxy\",\r\n  \"bundles\": [\r\n    {\r\n      \"id\": \"anggggg\",\r\n      \"seller_id\": 1,\r\n      \"items\": [\r\n        {\r\n          \"sku\": \"AHSPG985TBEGEU\",\r\n          \"discount_value\": 100,\r\n          \"discount_type\": 1,\r\n          \"position\": \"A\",\r\n          \"quantity\": 1\r\n        },\r\n        {\r\n          \"sku\": \"AHSMRX22\",\r\n          \"discount_value\": 300,\r\n          \"discount_type\": 1,\r\n          \"position\": \"B\",\r\n          \"quantity\": 1\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/bundles",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"bundles"
+					]
+				},
+				"description": "Beware - when using this request all bundles on stage will be deleted. only bundle sent in this request will be saved / displayed"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete bundle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"website\": \"altex\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/bundles/testrapid",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"bundles",
+						"testrapid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add coupon on rule",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"website\": \"altex\",\r\n  \"rule_id\": 17951,\r\n  \"times_used\": 1,\r\n  \"discount_value\": 100,\r\n  \"omnichannel\": 1,\r\n  \"start_date\": \"2020-05-01\",\r\n  \"end_date\": \"2020-11-01\",\r\n  \"email\": \"angelin.burtea@altex.ro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/coupons/laaaa",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"coupons",
+						"laaaa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add invoice (N/A)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"seller\": 1,\r\n  \"invoices\": [\r\n    {\r\n      \"order_id\": 3844564,\r\n      \"file_name\": \"ATX-3844564\",\r\n      \"file_content\": \"JVBERi0xLjMNCiXi48/TDQoNCjEgMCBvYmoNCjw8DQovVHlwZSAvQ2F0YWxvZw0KL091dGxpbmVzIDIgMCBSDQovUGFnZXMgMyAwIFINCj4+DQplbmRvYmoNCg0KMiAwIG9iag0KPDwNCi9UeXBlIC9PdXRsaW5lcw0KL0NvdW50IDANCj4+DQplbmRvYmoNCg0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdlcw0KL0NvdW50IDINCi9LaWRzIFsgNCAwIFIgNiAwIFIgXSANCj4+DQplbmRvYmoNCg0KNCAwIG9iag0KPDwNCi9UeXBlIC9QYWdlDQovUGFyZW50IDMgMCBSDQovUmVzb3VyY2VzIDw8DQovRm9udCA8PA0KL0YxIDkgMCBSIA0KPj4NCi9Qcm9jU2V0IDggMCBSDQo+Pg0KL01lZGlhQm94IFswIDAgNjEyLjAwMDAgNzkyLjAwMDBdDQovQ29udGVudHMgNSAwIFINCj4+DQplbmRvYmoNCg0KNSAwIG9iag0KPDwgL0xlbmd0aCAxMDc0ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBBIFNpbXBsZSBQREYgRmlsZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIFRoaXMgaXMgYSBzbWFsbCBkZW1vbnN0cmF0aW9uIC5wZGYgZmlsZSAtICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjY0LjcwNDAgVGQNCigganVzdCBmb3IgdXNlIGluIHRoZSBWaXJ0dWFsIE1lY2hhbmljcyB0dXRvcmlhbHMuIE1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NTIuNzUyMCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDYyOC44NDgwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjE2Ljg5NjAgVGQNCiggdGV4dC4gQW5kIG1vcmUgdGV4dC4gQm9yaW5nLCB6enp6ei4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjA0Ljk0NDAgVGQNCiggbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDU5Mi45OTIwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNTY5LjA4ODAgVGQNCiggQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA1NTcuMTM2MCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBFdmVuIG1vcmUuIENvbnRpbnVlZCBvbiBwYWdlIDIgLi4uKSBUag0KRVQNCmVuZHN0cmVhbQ0KZW5kb2JqDQoNCjYgMCBvYmoNCjw8DQovVHlwZSAvUGFnZQ0KL1BhcmVudCAzIDAgUg0KL1Jlc291cmNlcyA8PA0KL0ZvbnQgPDwNCi9GMSA5IDAgUiANCj4+DQovUHJvY1NldCA4IDAgUg0KPj4NCi9NZWRpYUJveCBbMCAwIDYxMi4wMDAwIDc5Mi4wMDAwXQ0KL0NvbnRlbnRzIDcgMCBSDQo+Pg0KZW5kb2JqDQoNCjcgMCBvYmoNCjw8IC9MZW5ndGggNjc2ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBTaW1wbGUgUERGIEZpbGUgMiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIC4uLmNvbnRpbnVlZCBmcm9tIHBhZ2UgMS4gWWV0IG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NzYuNjU2MCBUZA0KKCBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY2NC43MDQwIFRkDQooIHRleHQuIE9oLCBob3cgYm9yaW5nIHR5cGluZyB0aGlzIHN0dWZmLiBCdXQgbm90IGFzIGJvcmluZyBhcyB3YXRjaGluZyApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY1Mi43NTIwIFRkDQooIHBhaW50IGRyeS4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NDAuODAwMCBUZA0KKCBCb3JpbmcuICBNb3JlLCBhIGxpdHRsZSBtb3JlIHRleHQuIFRoZSBlbmQsIGFuZCBqdXN0IGFzIHdlbGwuICkgVGoNCkVUDQplbmRzdHJlYW0NCmVuZG9iag0KDQo4IDAgb2JqDQpbL1BERiAvVGV4dF0NCmVuZG9iag0KDQo5IDAgb2JqDQo8PA0KL1R5cGUgL0ZvbnQNCi9TdWJ0eXBlIC9UeXBlMQ0KL05hbWUgL0YxDQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCg0KMTAgMCBvYmoNCjw8DQovQ3JlYXRvciAoUmF2ZSBcKGh0dHA6Ly93d3cubmV2cm9uYS5jb20vcmF2ZVwpKQ0KL1Byb2R1Y2VyIChOZXZyb25hIERlc2lnbnMpDQovQ3JlYXRpb25EYXRlIChEOjIwMDYwMzAxMDcyODI2KQ0KPj4NCmVuZG9iag0KDQp4cmVmDQowIDExDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDAwMTkgMDAwMDAgbg0KMDAwMDAwMDA5MyAwMDAwMCBuDQowMDAwMDAwMTQ3IDAwMDAwIG4NCjAwMDAwMDAyMjIgMDAwMDAgbg0KMDAwMDAwMDM5MCAwMDAwMCBuDQowMDAwMDAxNTIyIDAwMDAwIG4NCjAwMDAwMDE2OTAgMDAwMDAgbg0KMDAwMDAwMjQyMyAwMDAwMCBuDQowMDAwMDAyNDU2IDAwMDAwIG4NCjAwMDAwMDI1NzQgMDAwMDAgbg0KDQp0cmFpbGVyDQo8PA0KL1NpemUgMTENCi9Sb290IDEgMCBSDQovSW5mbyAxMCAwIFINCj4+DQoNCnN0YXJ0eHJlZg0KMjcxNA0KJSVFT0YNCg==\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/invoices",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"invoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post order export(see description)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"seller\": 1,\r\n  \"order\": {\r\n    \"id\": 2254952,\r\n    \"incrementId\": \"ATX000000205794-1\",\r\n    \"sellerId\": 1,\r\n    \"deliveryMode\": 4,\r\n    \"deliveryInStore\": 0,\r\n    \"inventoryLocationId\": \"O1\",\r\n    \"paymentMode\": 8,\r\n    \"originId\": \"MAGENTO\",\r\n    \"grandTotal\": \"1249.9000\",\r\n    \"salesAgentId\": \"2760429463013\",\r\n    \"taxGroupId\": \"CL_INT\",\r\n    \"orderDate\": \"2020-07-24 14:22:56\",\r\n    \"retailReceiptId\": null,\r\n    \"retailTerminalId\": null,\r\n    \"comment\": \"\",\r\n    \"isExportable\": 1,\r\n    \"customerIsGuest\": false,\r\n    \"customer\": {\r\n      \"id\": 1584506,\r\n      \"email\": \"angelin.burtea@altex.ro\",\r\n      \"telephone\": \"0743173996\",\r\n      \"fiscalCode\": null\r\n    },\r\n    \"items\": [\r\n      {\r\n        \"id\": 1233079,\r\n        \"confirmationItemId\": 3422411,\r\n        \"sku\": \"LAP81MV004RRM\",\r\n        \"inventoryLocationId\": \"117\",\r\n        \"qty\": \"1.0000\",\r\n        \"rowTotal\": \"1099.9000\",\r\n        \"rowDiscount\": \"0.0000\",\r\n        \"rowSaleTotal\": \"1099.9000\",\r\n        \"taxGroupId\": \"0\",\r\n        \"salesAgentId\": null,\r\n        \"resealedCode\": null,\r\n        \"status\": \"registered\",\r\n        \"order\": 2254952,\r\n        \"supplierId\": null\r\n      },\r\n      {\r\n        \"id\": 1233080,\r\n        \"confirmationItemId\": 3422411,\r\n        \"sku\": \"SRVRAMBURS\",\r\n        \"inventoryLocationId\": \"117\",\r\n        \"qty\": \"1.0000\",\r\n        \"rowTotal\": \"150.0000\",\r\n        \"rowDiscount\": \"0.0000\",\r\n        \"rowSaleTotal\": \"150.0000\",\r\n        \"taxGroupId\": \"0\",\r\n        \"salesAgentId\": null,\r\n        \"resealedCode\": null,\r\n        \"status\": \"registered\",\r\n        \"order\": 2254952,\r\n        \"supplierId\": null\r\n      }\r\n    ],\r\n    \"payments\": [\r\n      {\r\n        \"id\": 1297753,\r\n        \"paymentMethod\": \"cash_on_delivery\",\r\n        \"currency\": \"RON\",\r\n        \"amountTotal\": \"1249.9000\",\r\n        \"additionalData\": [],\r\n        \"order\": 2254952\r\n      }\r\n    ],\r\n    \"billingAddress\": {\r\n      \"id\": 1680677,\r\n      \"type\": 1,\r\n      \"countryId\": \"RO\",\r\n      \"countryRegionId\": \"ROU\",\r\n      \"regionId\": \"CJ\",\r\n      \"city\": \"CLUJ-NAPOCA\",\r\n      \"name\": \"Angelin Burtea\",\r\n      \"email\": \"angelin.burtea@altex.ro\",\r\n      \"telephone\": \"0743173996\",\r\n      \"street\": \"Strada independentei\",\r\n      \"socialNo\": null,\r\n      \"clientGroupId\": \"CL_INT\",\r\n      \"company\": \"\",\r\n      \"companyBank\": \"\",\r\n      \"companyRegNo\": \"\",\r\n      \"companyIban\": \"\",\r\n      \"companyFiscalCode\": \"\",\r\n      \"order\": 2254952\r\n    },\r\n    \"shippingAddress\": {\r\n      \"id\": 1680678,\r\n      \"type\": 2,\r\n      \"countryId\": \"RO\",\r\n      \"countryRegionId\": \"ROU\",\r\n      \"regionId\": \"CJ\",\r\n      \"city\": \"CLUJ-NAPOCA\",\r\n      \"name\": \"Angelin Burtea\",\r\n      \"email\": \"angelin.burtea@altex.ro\",\r\n      \"telephone\": \"0743173996\",\r\n      \"street\": \"Strada independentei\",\r\n      \"socialNo\": null,\r\n      \"clientGroupId\": \"CL_INT\",\r\n      \"company\": \"\",\r\n      \"companyBank\": \"\",\r\n      \"companyRegNo\": \"\",\r\n      \"companyIban\": \"\",\r\n      \"companyFiscalCode\": \"\",\r\n      \"order\": 2254952\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/orders",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"orders"
+					]
+				},
+				"description": "will receive error (could not send order to AX). Request still works to create xml order export file"
+			},
+			"response": []
+		},
+		{
+			"name": "Post export order bulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n  \"seller\": 1,\r\n  \"order\": {\r\n    \"incrementId\": \"ATX000000202172\",\r\n    \"billingAddress\": {\r\n      \"city\": \"BERZOVIA\",\r\n      \"clientGroupId\": \"CL_INT\",\r\n      \"countryId\": \"RO\",\r\n      \"countryRegionId\": \"ROU\",\r\n      \"name\": \"Test Test\",\r\n      \"company\": \"string\",\r\n      \"regionId\": \"CS\",\r\n      \"telephone\": \"0740000000\"\r\n    },\r\n    \"shippingAddress\": {\r\n      \"city\": \"BERZOVIA\",\r\n      \"clientGroupId\": \"CL_INT\",\r\n      \"countryId\": \"RO\",\r\n      \"countryRegionId\": \"ROU\",\r\n      \"name\": \"Test Test\",\r\n      \"company\": \"string\",\r\n      \"regionId\": \"CS\",\r\n      \"telephone\": \"0740000000\"\r\n    },\r\n    \"originId\": \"MAGENTO\",\r\n    \"items\": [\r\n      {\r\n        \"confirmationItemId\": 3421325,\r\n        \"inventoryLocationId\": 1232,\r\n        \"qty\": 1,\r\n        \"sku\": \"JOCPSVRDREAMS\"\r\n      }\r\n    ]\r\n  }\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/orders/bulk",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"orders",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete price",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"website\": \"altex\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/prices/LAP81UF000JRM/1",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"prices",
+						"LAP81UF000JRM",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Price update bulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"website\": \"altex\",\r\n  \"items\": [\r\n    {\r\n      \"sku\": \"JOCPSVRDREAMS\",\r\n      \"base_price\": 399,\r\n      \"selling_price\": 299,\r\n      \"discount_type\": 1,\r\n      \"green_tax\": 5\r\n    },\r\n    {\r\n      \"sku\": \"JOCPSVRNOMANSKY\",\r\n      \"base_price\": 399,\r\n      \"selling_price\": 299,\r\n      \"discount_type\": 1,\r\n      \"green_tax\": 5\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/prices/bulk",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"prices",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Promotion update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"website\": \"altex\",\r\n  \"seller\": 1,\r\n  \"promotions\": [\r\n    {\r\n      \"sku\": \"JOCPSVRNOMANSKY\",\r\n      \"base_price\": 149,\r\n      \"final_price\": 100,\r\n      \"discount_from_date\": \"2020-05-01\",\r\n      \"discount_to_date\": \"2020-13-01\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/promotions",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"promotions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete promotion by rule id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"website\": \"altex\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/promotions?rule_id=264245",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"promotions"
+					],
+					"query": [
+						{
+							"key": "rule_id",
+							"value": "264245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update stock by seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"website\": \"altex\",\r\n  \"seller\": 1,\r\n  \"products\": [\r\n    {\r\n      \"sku\": \"JOCPSVRDREAMS\",\r\n      \"qty\": 200,\r\n      \"warehouseId\": 3000\r\n      }\r\n    \r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_DT}}/stocks",
+					"host": [
+						"{{base_url_DT}}"
+					],
+					"path": [
+						"stocks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

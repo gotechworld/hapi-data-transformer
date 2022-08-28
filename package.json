@@ -1,0 +1,78 @@
+{
+  "name": "hapi-data-transformer",
+  "version": "1.0.0",
+  "description": "Data transformer utility tool",
+  "license": "ISC",
+  "author": "Gabriel Cioropina <gabriel.cioropina@altex.ro>",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files",
+    "lint": "eslint 'src/**/*.js' --quiet --fix",
+    "prepare": "npm run snyk-protect",
+    "serve": "node dist/server.js",
+    "snyk-protect": "snyk protect",
+    "start": "nodemon --exec babel-node src/server.js",
+    "test": "snyk test",
+    "debug": "nodemon --exec babel-node $NODE_DEBUG_OPTION src/server.js",
+    "import-best-buy-debug": "nodemon --exec babel-node $NODE_DEBUG_OPTION src/command.js --command best_buy_import --input_file_altex best_buy_altex.csv  --input_file_mediagalaxy best_buy_mg.csv"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --write",
+      "eslint 'src/**/*.js' --fix"
+    ]
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/catbox-redis": "^5.0.5",
+    "@hapi/glue": "^7.0.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/hoek": "^9.0.4",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/vision": "^6.0.0",
+    "apisauce": "^1.1.1",
+    "basic-ftp": "^4.5.4",
+    "confidence": "^4.0.2",
+    "csvtojson": "^2.0.10",
+    "ejs": "^2.6.2",
+    "hapi-alerto": "git+ssh://git@gitlab.altex.ro:plug/hapi-alerto.git#release/1.0.0",
+    "hapi-internal-bridge": "git+ssh://git@gitlab.altex.ro:plug/hapi-internal-bridge.git",
+    "hapi-pino": "^8.0.0",
+    "hapi-swagger": "^13.0.0",
+    "lodash": "^4.17.20",
+    "minimist": "^1.2.5",
+    "moment": "^2.25.3",
+    "redis": "^3.1.2",
+    "require-dir": "^1.2.0",
+    "snyk": "^1.320.3",
+    "underscore": "^1.10.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "@commitlint/cli": "^9.0.1",
+    "@hapi/eslint-config-hapi": "^13.0.2",
+    "@hapi/eslint-plugin-hapi": "^4.3.5",
+    "babel-eslint": "^10.1.0",
+    "commitlint-config-jira": "^1.4.1",
+    "commitlint-plugin-jira-rules": "^1.4.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5"
+  },
+  "snyk": true
+}

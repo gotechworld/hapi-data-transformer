@@ -1,0 +1,17 @@
+version: "2"
+services:
+  app_data_transformer:
+    container_name: app_data_transformer
+    restart: always
+    build: .
+    volumes:
+      - ./../:/var/www/app/
+    ports:
+      - "6800:6800"
+    links:
+      - redis_data_transformer
+  redis_data_transformer:
+    container_name: redis_data_transformer
+    image: redis
+    ports:
+      - "6379:6379"

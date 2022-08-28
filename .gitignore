@@ -1,0 +1,9 @@
+src/config/manifest.json
+*.log
+.idea
+node_modules
+*.txt
+*.csv
+.DS_Store
+*.tmp
+dist
