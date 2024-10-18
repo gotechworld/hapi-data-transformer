@@ -37,7 +37,7 @@
     "@hapi/inert": "^6.0.1",
     "@hapi/joi": "^17.1.1",
     "@hapi/vision": "^6.0.0",
-    "apisauce": "^1.1.1",
+    "apisauce": "^3.1.0",
     "basic-ftp": "^4.5.4",
     "confidence": "^4.0.2",
     "csvtojson": "^2.0.10",
